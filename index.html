@@ -23,7 +23,8 @@
 			})
 			function show(){
 				var star=document.createElement("img");
-				star.src="images/01.png";
+				var a = new Array("images/01.png","images/star01.gif");
+				star.src=a[Math.floor(Math.random()*a.length)];
 				star.style.position="absolute"
 				star.style.width=100+"px";
 				star.style.height=100+"px";
