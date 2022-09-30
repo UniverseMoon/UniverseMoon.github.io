@@ -5,8 +5,8 @@
 		<title></title>
 	</head>
 	<body style="background: black;">
-		<audio autoplay="autoplay" preload="true">
-			<source src="music.mp3"/>
+		<audio autoplay="autopaly" loop="loop" controls="controls">
+			<source src="music.mp3" type="audio/mp3"/>
 		</audio>
 	</body>
 	<script>
@@ -19,12 +19,14 @@
 			}
 			alert("那走吧，和我一起干饭去。");
 			function show(){
-				var star=document.createElement("img");				
+				var star=document.createElement("img");
+				var a=new Array("./images/star01.gif","./images/图片1.png");
+				
 				console.log(a);
 				star.src="images/图片1.png";
 				star.style.position="absolute"
-				star.style.width=100+"px";
-				star.style.height=100+"px";
+				star.style.width=40+"px";
+				star.style.height=40+"px";
 				star.style.top=Math.floor(window.innerHeight*Math.random()-20)+"px";
 				star.style.left=Math.floor(window.innerWidth*Math.random()-20)+"px";
 				document.body.appendChild(star);
