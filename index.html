@@ -1,1 +1,37 @@
-你好啊！！！
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body style="background: black;">
+		
+	</body>
+	<script>
+			alert("嘿，有件事想和你说，那是一个月黑风高的夜晚");
+			alert("我遇见了你，从那以后我便对你难以忘怀了");
+			alert("每天都在想着你，我发现");
+			alert("越来越喜欢你了");
+			while(!confirm("如果你对我也有好感的话请点是")){
+				alert("请再考虑一下");
+			}
+			alert("那走吧，和我一起干饭去。");
+			function show(){
+				var star=document.createElement("img");
+				var a=new Array("./images/star01.gif","./images/图片1.png");
+				
+				console.log(a);
+				star.src="images/图片1.png";
+				star.style.position="absolute"
+				star.style.width=40+"px";
+				star.style.height=40+"px";
+				star.style.top=Math.floor(window.innerHeight*Math.random()-20)+"px";
+				star.style.left=Math.floor(window.innerWidth*Math.random()-20)+"px";
+				document.body.appendChild(star);
+				star.onclick=function(){
+					this.parentNode.removeChild(star);//点击移除
+				}
+			}
+			window.setInterval(show,1000);
+	</script>
+</html>
