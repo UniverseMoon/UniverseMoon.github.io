@@ -5,7 +5,7 @@
 		<title></title>
 	</head>
 	<body style="background: black;">
-		<audio autoplay="autopaly"  preload="auto">
+		<audio autoplay="true" loop="loop" id="audios">
 			<source src="music.mp3"/>
 		</audio>
 	</body>
@@ -18,11 +18,11 @@
 				alert("请再考虑一下");
 			}
 			alert("那走吧，和我一起干饭去。");
+			document.addEventListener('touchstart',function(){
+				document.getElementById("audios").play()
+			})
 			function show(){
 				var star=document.createElement("img");
-				var a=new Array("./images/star01.gif","./images/图片1.png");
-				
-				console.log(a);
 				star.src="images/01.png";
 				star.style.position="absolute"
 				star.style.width=100+"px";
